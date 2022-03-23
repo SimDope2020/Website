@@ -1,0 +1,756 @@
+html {
+    scroll-behavior: smooth;
+}
+body {
+    margin: 0;
+    padding: 0;
+    animation: transitionIn 2s;
+}
+@keyframes transitionIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.wrapper-container {
+    background-color: #000;
+    height: 80px;
+    opacity: 0.9;
+    position: fixed;
+    width: 100%;
+    transition: 1s;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    top: 0;
+    z-index: 999;
+}
+.logo {
+    width: 30%;
+    margin: 0;
+    padding-top: 10px;
+}
+.name {
+    width: 40%;
+    color: white;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1 {
+    transition: 1s;
+}
+#myNav {
+    position: fixed;
+}
+.overlay {
+    height: 0%;
+    width: 100%;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.9);
+    overflow-y: hidden;
+    transition: 0.5s;
+}
+  
+.overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+  
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+  
+.overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+}
+  
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+.menu {
+    color: white;
+    /*padding: 20px;*/
+    padding-right: 30px;
+    padding-top: 20px;
+    display: flex;
+    justify-content: flex-end;
+    width: 30%;
+}
+  
+@media screen and (max-height: 450px) {
+    .overlay {overflow-y: auto;}
+    .overlay a {font-size: 20px}
+    .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+    }
+}
+/* Content coding */
+.content-container {
+    background-image: url("images/hero1.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 1200PX;
+}
+.gap {
+    height: 100px;
+}
+/* Full-width input fields */
+input[type=text], input[type=password], input[type=email] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  
+  /* Set a style for all buttons */
+  .log-btn {
+    background-color: black;
+    color: white;
+    padding: 14px 20px;
+    margin: 50px;
+    box-shadow: 1px 2px 3px 0px gray;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 8px;
+  }
+  
+  button:hover {
+    opacity: 0.8;
+  }
+  .log-sub {
+      width: auto;
+      padding: 12px 20px;
+      display: inline-block;
+      background-color: #000;
+      border: none;
+      color: white;
+      transition: 1s;
+  }
+
+  .log-sub:hover {
+    box-shadow: 1px 2px 3px 0px white;
+    border-radius: 16px;
+  }
+  
+  /* Extra styles for the cancel button */
+  .cancelbtn {
+    width: 100%;
+    padding: 10px 18px;
+    background-color: #f44336;
+    border: none;
+  }
+  
+  /* Center the image and position the close button */
+  .imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+  }
+  
+  .log-container {
+    padding: 40px;
+    background-color: rgba(0,0,0,0.8);
+    border-radius: 16px;
+  }
+  
+  span.psw {
+    float: right;
+    padding-top: 16px;
+    color: white;
+  }
+
+  .psw a {
+    color: white;
+    text-decoration: none;
+  }
+
+  .psw a:hover {
+    color: red;
+  }
+  
+  /* The Modal (background) */
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 3; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.8); /* Black w/ opacity */
+    padding-top: 60px;
+  }
+  button .log-btn {
+      height: 200px;
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: rgba(0,0,0,1);
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 40%; /* Could be more or less, depending on screen size */
+    border-radius: 16px;
+    position: fixed;
+    left: 30%;
+    top: 10%;
+  }
+  
+  /* The Close Button (x) */
+  .close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color:white;
+    font-size: 35px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: red;
+    cursor: pointer;
+  }
+  
+  /* Add Zoom Animation */
+  .animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+  }
+  
+  @-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+  }
+    
+  @keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+  }
+  
+  /* Change styles for span and cancel button on extra small screens */
+  @media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 100%;
+    }
+  }
+.moto {
+    color: white;
+}
+.moto {
+    background-color: rgb(0, 0, 0); /* Fallback color */
+    background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+    color: white;
+    font-size: 50px;
+    font-weight: bold;
+    border: 3px solid #f1f1f1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 40%;
+    padding: 20px;
+    text-align: center;
+    transition: width 2s, height 2s;
+}
+
+.moto:hover {
+    width: 50%;
+}
+.col + .col {
+    margin-left: 10px;
+}
+/* Style the tab */
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+    display: flex;
+    justify-content: center;
+  }
+  
+  /* Style the buttons inside the tab */
+  .tab button {
+    background-color: inherit;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.6s;
+    font-size: 17px;
+  }
+  
+  /* Change background color of buttons on hover */
+  .tab button:hover {
+    background-color: #ddd;
+  }
+  
+  /* Create an active/current tablink class */
+  .tab button.active {
+    background-color: #ccc;
+  }
+  
+  /* Style the tab content */
+  .tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border-top: none;
+    animation: fadeEffect 2s;
+    -webkit-animation: fadeEffect 2s;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  /* Style the close button */
+.topright {
+    float: right;
+    cursor: pointer;
+    font-size: 28px;
+  }
+  
+  .topright:hover {color: red;}
+  @-webkit-keyframes fadeEffect {
+      from {opacity: 0;}
+      to{opacity: 1;}
+  }
+  @keyframes fadeEffect {
+        from {opacity: 0;}
+        to{opacity: 1;}
+  }
+/* Footer container coding */
+.footer-container {
+    height: 200px;
+    background-color: gray;
+    border-top: 2px solid black;
+}
+.ftop {
+    height: 180px;
+    display: flex;
+    justify-content: space-around;
+}
+.cont {
+    font-size: 16px;
+    text-align: right;
+    width: 20%;
+}
+.soc-med {
+    padding: 10px;
+    width: 10%;
+}
+.toggle-btn {
+  display: block;
+  padding: 16px;
+  border: none;
+  background-color: black;
+  color: white;
+}
+.game {
+  display: block;
+  padding: 16px;
+  border: none;
+  background-color: black;
+  width: 108px;
+  color: white;
+}
+.game a {
+  text-decoration: none;
+  color: white;
+}
+.fbottom {
+    height: 50px;
+    background-color: black;
+    text-align: center;
+    font-size: 12px;
+    color: gray;
+    padding-top: 5px;
+}
+.sponsors {
+  width: 23%;
+  padding: 20px;
+}
+/* To Top button code */
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: red;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 4px;
+  }
+  
+  #myBtn:hover {
+    background-color: #555;
+  }
+/* Event category code section */
+/* The actual timeline (the vertical ruler) */
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  /* The actual timeline (the vertical ruler) */
+  .timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color:gray;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+  }
+  
+  /* Container around content */
+  .container {
+    padding: 10px 40px;
+    position: relative;
+    background-color:transparent;
+    width: 50%;
+  }
+  
+  /* The circles on the timeline */
+  .container::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -17px;
+    background-color: white;
+    border: 4px solid #FF9F55;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+  }
+  
+  /* Place the container to the left */
+  .left {
+    left: -6.75%;
+  }
+  
+  /* Place the container to the right */
+  .right {
+    left: 50%;
+  }
+  
+  /* Add arrows to the left container (pointing right) */
+  .left::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid gray;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent gray;
+  }
+  
+  /* Add arrows to the right container (pointing left) */
+  .right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid gray;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent gray;
+  }
+  
+  /* Fix the circle for containers on the right side */
+  .right::after {
+    left: -16px;
+  }
+  
+  /* The actual content */
+  .content {
+    padding: 20px 30px;
+    background-color: white;
+    position: relative;
+    border-radius: 6px;
+    border: 2px solid #FF9F55;
+  }
+  
+  /* Media queries - Responsive timeline on screens less than 600px wide */
+  @media screen and (max-width: 600px) {
+    /* Place the timelime to the left */
+    .timeline::after {
+    left: 31px;
+    }
+    
+    /* Full-width containers */
+    .container {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+    }
+    
+    /* Make sure that all arrows are pointing leftwards */
+    .container::before {
+    left: 60px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+    }
+  
+    /* Make sure all circles are at the same spot */
+    .left::after, .right::after {
+    left: 15px;
+    }
+    
+    /* Make all right containers behave like the left ones */
+    .right {
+    left: 0%;
+    }
+  }
+.gap1 {
+    height: 120px;
+}
+/* Contact page code and guide */
+.cont-container-contact {
+  display: flex;
+  justify-content: space-around;
+  height: 900px;
+}
+
+.contact-form, .aside{
+  width: 50%;
+  padding: 20px;
+}
+
+.news {
+  height: 300px;
+  background-color: gray;
+  padding: 20px;
+  border: 2px solid black;
+}
+
+.news-input {
+  width: 80%;
+}
+
+.send {
+  display: block;
+  padding: 10px;
+  color: white;
+  background-color: black;
+  border: none;
+}
+
+input[type=submit] {
+  display: block;
+  padding: 10px;
+  color: white;
+  background-color: black;
+  border: none;
+}
+
+input[type=submit]:hover {
+  opacity: 0.7;
+}
+
+/* Showroom style code */
+.body-show {
+  background-color: rgb(70, 67, 67);
+}
+/* Container holding the image and the text */
+.container-peg {
+  position: relative;
+}
+
+/* Bottom right text */
+.text-block-gal {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+  background-color: silver;
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.buttons{
+  display: flex;
+  justify-content: space-around;
+}
+body{
+  background-color: silver;
+}
+a{
+  text-decoration:none;
+  color: #000;
+}
+.first{
+	display:flex;
+	justify-content:center;
+}
+
+/* Slide show code */
+.slide{
+  width: 1600px;
+  max-width:100%;
+  height: 700px;
+  overflow:hidden;
+  margin: 0px auto;
+  -webkit-box-shadow: 0 8px 6px -6px black;
+  -moz-box-shadow: 0 8px 6px -6px black;
+  -o-box-shadow: 0 8px 6px -6px black;
+  box-shadow: 0 8px 6px -6px black;
+}
+.slide-img{
+  display:block;
+  width:0;
+  float: left;
+  -webkit-transition: all 0.75s;
+  -moz-transition: all 0.75s;
+  transition: all 0.75s;
+}
+.slide-img img {
+  width:1600px;
+}
+/* Card styling */
+.cards {
+  position: relative;
+   border: 1px solid #ccc;
+ box-shadow: 0 4px 8px 0 black;
+ max-width: 500px;
+
+ font-family: arial;
+
+     position: fixed;
+   -webkit-transition: -webkit-transform 1s;
+   -moz-transition: -moz-transform 1s;
+   -o-transition: -o-transform 1s;
+   transition: transform 1s;
+   -webkit-transform-style: preserve-3d;
+   -moz-transform-style: preserve-3d;
+   -o-transform-style: preserve-3d;
+   transform-style: preserve-3d;
+}
+​
+.title {
+ color: grey;
+ font-size: 18px;
+}
+​body{
+color: grey;
+}
+.butto {
+ border: none;
+ outline: 0;
+ display: inline-block;
+ padding: 8px;
+ color: white;
+ background-color: #000;
+ text-align: center;
+ cursor: pointer;
+ width: 15%;
+ font-size: 18px;
+ margin: 0 auto;
+ display: block;
+}
+
+.front{
+ height: 100%;
+}
+
+.cards .back {
+ position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+   background: grey;
+   -webkit-transform: rotateY( 180deg );
+   -moz-transform: rotateY( 180deg );
+   -o-transform: rotateY( 180deg );
+   transform: rotateY( 180deg );
+}
+
+.back {
+ display: flex;
+ flex-direction: column;
+ align-content: center;
+}
+.cards .flipped {
+ margin-top: -25px;
+   -webkit-transform: rotateY( 180deg );
+   -moz-transform: rotateY( 180deg );
+   -o-transform: rotateY( 180deg );
+   transform: rotateY( 180deg );
+}
+.cards div {
+ line-height: 20px;
+   color: white;
+   text-align: center;
+   font-weight: bold;
+   -webkit-backface-visibility: hidden;
+   -moz-backface-visibility: hidden;
+   -o-backface-visibility: hidden;
+   backface-visibility: hidden;
+}
+h2{
+ text-align:center;
+}
+.cards-container{
+ display:flex;
+ justify-content:space-evenly;
+}
+#blue{
+  display: inline-block;
+  padding:20px;
+  margin:20px;
+}
+#grey{
+  display: inline-block;
+  padding:20px;
+  margin:20px;
+}
+#last{
+ display:flex;
+ justify-content:center;
+}
+.item-container {
+  height: 1200px;
+}

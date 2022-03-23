@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Contact | Pegasus</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="pegasus.js"></script>
+    <script type="text/javascript" src="contact form validation.js"></script>
+    <script src="news val.js"></script>
+    
+</head>
+<body>
+    <div class="wrapper-container" id="wrapper">
+        <div class="logo" id="logo">
+            <img src="images/logo2.png" alt="logo">
+        </div>
+        <div class="name">
+            <h1 id="head1">PEGASUS Elite Cars</h1>
+        </div>
+        <div id="myNav" class="overlay">
+           <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+       <div class="overlay-content">
+            <a href="index.html">Home</a>
+            <a href="event.html">Events</a>
+            <a href="showroom.html">Brand Central</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        </div>
+        <span style="font-size:30px;cursor:pointer" onclick="openNav()" class="menu" id="menu-tab">&#9776;</span>
+    </div>
+    <div class="gap1"></div>
+<div class="cont-container-contact">
+    <div class="contact-form">
+            <form onsubmit="return formValidation()" name="contact" action="https://formspree.io/xyyypqej" method="POST">
+                <p>Name:</p>
+                <input type="text" name="fname" placeholder="First Name">
+                <p>Surname:</p>
+                <input type="text" name="lname" placeholder="Last Name">
+                <p>Email:</p>
+                <input type="email" name="email" placeholder="Email">
+                <p>Mobile Number:</p>
+                <input type="text" name="number" placeholder="eg. 0853217895">
+                <p>Subject:</p>
+                <input type="text" name="subject" placeholder="Subject">
+                <p>Message: optional</p>
+                <textarea name="text" id="textarea" cols="30" rows="10"></textarea><br><br>
+                <input type="submit" name="submit" value="submit">
+            </form>
+        </div>
+        <div class="aside">
+                <form class="news" onsubmit="return newsValidation()" name="newsf" action="https://formspree.io/xeqqzepk" method="POST">
+                    <div class="news-title">
+                      <h2>Subscribe to our Newsletter</h2>
+                      <p>Keep in touch with the latest news and events as you subscribe to our Newsletter.</p>
+                    </div>
+                  
+                    <div class="news-input">
+                      <input type="text" placeholder="Name" name="name">
+                      <input type="text" placeholder="Email address" name="mail"><br>
+                      <label>
+                        <input type="checkbox" checked="checked" name="subscribe"> Daily Newsletter
+                      </label>
+                    </div>
+                  <br>
+                    <div class="news-submit">
+                      <input type="submit" value="Subscribe" name="submit">
+                    </div>
+                  </form>
+            </div>
+</div>
+    <div class="footer-container">
+        <div class="ftop">
+        <!--cont is for contact info in the footer-->
+            <div class="cont">
+                <p>1 Dock Road</p>
+                <p>V & A Waterfront</p>
+                <p>Cape Town</p>
+                <p>Tel: (021)-456-9632</p>
+                <p>Email: pegasuselite@gmail.com</p>
+            </div>
+        <!--sponsors for the company-->
+            <div class="sponsors">
+                    <img src="images/Pagani2.png" alt="Pagani">
+            </div>
+        <!--soc-med is for social media tags-->
+            <div class="soc-med">
+                <a href=""><img src="images/Facebook.png" alt="facebook"></a>
+                <a href=""><img src="images/Instagram.png" alt="Instagram"></a>
+                <a href=""><img src="images/Twitter.png" alt="Twitter"></a>
+                <a href=""><img src="images/Pinterest.png" alt="Pinterest"></a>
+            </div>
+        </div>
+        <div class="fbottom">
+            <p>Pegasus Elite Cars &copy All Rights Reserved PTY Ltd</p>
+        </div>
+    </div>
+        <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button> 
+        <script type="text/javascript" src="pegasus-button.js">
+        </script>
+        <script type="text/javascript" src="nav color.js"></script>
+        
+</body>
+</html>

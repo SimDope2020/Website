@@ -1,0 +1,61 @@
+#gHolder{
+  width: 600px;
+  height: 500px;
+  margin: 0 auto;
+  background-color: silver;
+  padding: 10px;
+}
+
+#theBigImageHolder{
+  width: 600px;
+  height: 400px;
+  background-color: white;
+}
+#theBigImageHolder >img{
+  width: 600px;
+  height: 400px;
+}
+#theBigImageHolder >img:hover{
+  border-radius: 100px;
+  cursor: pointer;;
+  transition: border-radius 0.5s linear 0s;
+  box-shadow: 10px 10px;
+}
+
+#thumbnailsHolder{
+  width: 590px;
+  height: 300px;
+  background-color: silver;
+  margin: 2px auto;
+  padding: 5px;
+  display:flex;
+  flex-wrap:wrap;
+}
+#thumbnailsHolder >img{
+  height: 100px;
+  width: 90px;
+  margin: 2px;
+  transition: border-radius 0.5s linear 0s;
+  box-shadow: 5px 5px;
+}
+#thumbnailsHolder >img:hover{
+  border-radius: 100px;
+  cursor: pointer;
+}
+.buttons{
+  display: flex;
+  justify-content: space-around;
+}
+body{
+  background-color: silver;
+}
+a{
+	text-decoration:none;
+}
+.first{
+	display:flex;
+	justify-content:center;
+}
+.button{
+	padding:10px;
+}

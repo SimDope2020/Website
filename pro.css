@@ -1,0 +1,102 @@
+.cards {
+	 position: relative;
+    border: 1px solid #ccc;
+  box-shadow: 0 4px 8px 0 black;
+  max-width: 500px;
+
+  font-family: arial;
+
+      position: fixed;
+    -webkit-transition: -webkit-transform 1s;
+    -moz-transition: -moz-transform 1s;
+    -o-transition: -o-transform 1s;
+    transition: transform 1s;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+
+}
+​
+.title {
+  color: grey;
+  font-size: 18px;
+}
+​body{
+color: grey;
+}
+.butto {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 15%;
+  font-size: 18px;
+	margin: 0 auto;
+	display: block;
+}
+
+.front{
+	height: 100%;
+}
+
+.card .back {
+	position: fixed;
+	 top: 0;
+	 left: 0;
+	 right: 0;
+	 bottom: 0;
+    background: grey;
+    -webkit-transform: rotateY( 180deg );
+    -moz-transform: rotateY( 180deg );
+    -o-transform: rotateY( 180deg );
+    transform: rotateY( 180deg );
+}
+
+.back {
+	display: flex;
+	flex-direction: column;
+	align-content: center;
+}
+.cards .flipped {
+	margin-top: -25px;
+    -webkit-transform: rotateY( 180deg );
+    -moz-transform: rotateY( 180deg );
+    -o-transform: rotateY( 180deg );
+    transform: rotateY( 180deg );
+}
+.cards div {
+	line-height: 20px;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+h2{
+	text-align:center;
+}
+.container{
+	display:flex;
+	justify-content:space-evenly;
+}
+#blue{
+	 display: inline-block;
+	 padding:20px;
+	 margin:20px;
+}
+#grey{
+	 display: inline-block;
+	 padding:20px;
+	 margin:20px;
+}
+#last{
+	display:flex;
+	justify-content:center;
+}
